@@ -6,7 +6,7 @@ export default function Home() {
   const [nombres, setNombres] = React.useState([])
   React.useEffect(() => {
         async function llamada(params) {
-            const data=await fetch("http://localhost:3000/api/nombres")
+            const data=await fetch("/api/nombres")
             const resultado=await data.json()
             setNombres(resultado)
             console.log(resultado)
